@@ -41,6 +41,11 @@ mat-error {
     text-align: justify
 }
 
+.link {
+    text-decoration: none;
+    color: black;
+}
+
 mat-radio-group {
     display: flex;
 }

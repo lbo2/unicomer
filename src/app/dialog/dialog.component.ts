@@ -12,7 +12,6 @@ export class DialogComponent implements OnInit {
 
   constructor(private dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA) {firstName, lastName, birthday, address, income, cellphone, homephone, profession, gender}) {
-      console.log(firstName)
       this.data = {
         firstName: firstName,
         lastName: lastName,
@@ -24,7 +23,6 @@ export class DialogComponent implements OnInit {
         profession: profession,
         gender: gender
       };
-      console.log(this.data)
   }
 
   ngOnInit() {

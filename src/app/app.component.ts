@@ -11,6 +11,7 @@ import { DialogComponent } from '../app/dialog/dialog.component';
 export class AppComponent implements OnInit {
   form: FormGroup;
   maxDate: Date;
+  urlGithub: string = "https://github.com/lbo2/unicomer";
 
   constructor(private formBuilder: FormBuilder, private dialog: MatDialog) { }
 
@@ -48,16 +49,28 @@ export class AppComponent implements OnInit {
     };
     const dialogRef = this.dialog.open(DialogComponent,
       dialogConfig);
-    dialogRef.afterClosed().subscribe(
-      val => console.log("Dialog output:", val)
-    );
-  }
-
-  saveDetails(form) {
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(form.value, null, 4));
+    dialogRef.afterClosed().subscribe();
   }
 
   onFormSubmit(form:NgForm) {  
-    console.log(form);  
+    const dob = new Date(this.form.get('birthday').value);
+    const date = `${dob.getMonth()+1}/${dob.getDate()}/${dob.getFullYear()}`;
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.data = {
+      firstName: this.form.get('firstName').value,
+      lastName: this.form.get('lastName').value,
+      birthday: date,
+      address: this.form.get('address').value,
+      income: this.form.get('income').value,
+      cellphone: this.form.get('cellphone').value,
+      homephone: this.form.get('homephone').value,
+      profession: this.form.get('profession').value,
+      gender: this.form.get('gender').value,
+    };
+    const dialogRef = this.dialog.open(DialogComponent,
+      dialogConfig);
+    dialogRef.afterClosed().subscribe();
   }  
 }

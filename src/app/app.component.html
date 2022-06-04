@@ -1,7 +1,7 @@
 <mat-toolbar color="accent">
   <span>José Montero</span>
   <span class="toolbar"></span>
-  <button mat-button href="https://github.com/lbo2/unicomer">Repo GitHub</button>
+  <a [href]="urlGithub" target="_blank" class="link"><button mat-button>Repo GitHub</button></a>
 
 </mat-toolbar>
 
@@ -18,70 +18,73 @@
           <mat-form-field class="form-item">
             <input formControlName="firstName" matInput placeholder="First Name" autocomplete="off">
           </mat-form-field>
-          <mat-error>  
-            <span *ngIf="!form.get('firstName').valid && form.get('firstName').touched">Please enter your first name</span>  
-          </mat-error>  
+          <mat-error>
+            <span *ngIf="!form.get('firstName').valid && form.get('firstName').touched">Please enter your first
+              name</span>
+          </mat-error>
         </div>
         <div class="form-group">
           <mat-form-field class="form-item">
             <input formControlName="lastName" matInput placeholder="Last Name" autocomplete="off">
           </mat-form-field>
-          <mat-error>  
-            <span *ngIf="!form.get('lastName').valid && form.get('lastName').touched">Please enter your last name</span>  
-          </mat-error>  
+          <mat-error>
+            <span *ngIf="!form.get('lastName').valid && form.get('lastName').touched">Please enter your last name</span>
+          </mat-error>
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group">
           <mat-form-field class="form-item">
-            <!-- <input formControlName="birthday" matInput [max]="maxDate" [matDatepicker]="picker" placeholder="Date of birth" disabled>
-            <mat-hint>MM/DD/YYYY</mat-hint>
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker touchUi="true" #picker disabled="false"></mat-datepicker> -->
-            <input [max]="maxDate" matInput readonly [matDatepicker]="dp3" placeholder="Date of birth" formControlName="birthday">
+            <input [max]="maxDate" matInput readonly [matDatepicker]="dp3" placeholder="Date of birth"
+              formControlName="birthday">
             <mat-hint>MM/DD/YYYY</mat-hint>
             <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
             <mat-datepicker #dp3 disabled="false"></mat-datepicker>
           </mat-form-field>
-          <mat-error>  
-            <span *ngIf="!form.get('birthday').valid && form.get('birthday').touched">Please enter a valid date of birth</span>  
-          </mat-error>  
+          <mat-error>
+            <span *ngIf="!form.get('birthday').valid && form.get('birthday').touched">Please enter a valid date of
+              birth</span>
+          </mat-error>
         </div>
         <div class="form-radio">
           <label for="gender" class="radio-label" style="align-self: center;">Gender :</label>
           <mat-radio-group formControlName="gender">
             <div class="form-radio-item">
-                <mat-radio-button value="male">Male</mat-radio-button>
+              <mat-radio-button value="male">Male</mat-radio-button>
             </div>
             <div class="form-radio-item">
-                <mat-radio-button value="female">Female</mat-radio-button>
+              <mat-radio-button value="female">Female</mat-radio-button>
             </div>
           </mat-radio-group>
-          <mat-error>  
-            <span *ngIf="!form.get('gender').valid && form.get('gender').touched">Please select a gender</span>  
-          </mat-error>  
+          <mat-error>
+            <span *ngIf="!form.get('gender').valid && form.get('gender').touched">Please select a gender</span>
+          </mat-error>
         </div>
       </div>
 
-      
+
 
       <div class="form-row">
         <div class="form-group">
           <mat-form-field class="form-item">
-            <input formControlName="cellphone" matInput mask="000-0000" prefix="+1 (876) " placeholder="Cellphone" autocomplete="off">
+            <input formControlName="cellphone" matInput mask="000-0000" prefix="+1 (876) " placeholder="Cellphone"
+              autocomplete="off">
           </mat-form-field>
-          <mat-error>  
-            <span *ngIf="!form.get('cellphone').valid && form.get('cellphone').touched">Please enter your cellphone number</span>  
-          </mat-error>  
+          <mat-error>
+            <span *ngIf="!form.get('cellphone').valid && form.get('cellphone').touched">Please enter your cellphone
+              number</span>
+          </mat-error>
         </div>
         <div class="form-group">
           <mat-form-field class="form-item">
-            <input formControlName="homephone" matInput mask="000-0000" prefix="+1 (876) " placeholder="Home Phone" autocomplete="off">
+            <input formControlName="homephone" matInput mask="000-0000" prefix="+1 (876) " placeholder="Home Phone"
+              autocomplete="off">
           </mat-form-field>
-          <mat-error>  
-            <span *ngIf="!form.get('homephone').valid && form.get('homephone').touched">Please enter your home phone number</span>  
-          </mat-error>  
+          <mat-error>
+            <span *ngIf="!form.get('homephone').valid && form.get('homephone').touched">Please enter your home phone
+              number</span>
+          </mat-error>
         </div>
       </div>
 
@@ -90,9 +93,9 @@
           <mat-form-field class="form-item">
             <input formControlName="address" matInput placeholder="Address" autocomplete="off">
           </mat-form-field>
-          <mat-error>  
-            <span *ngIf="!form.get('address').valid && form.get('address').touched">Please enter your address</span>  
-          </mat-error>  
+          <mat-error>
+            <span *ngIf="!form.get('address').valid && form.get('address').touched">Please enter your address</span>
+          </mat-error>
         </div>
       </div>
 
@@ -109,38 +112,32 @@
               <mat-option value="frontend_develope">FrontEnd Developer</mat-option>
             </mat-select>
           </mat-form-field>
-          <mat-error>  
-            <span *ngIf="!form.get('profession').valid && form.get('profession').touched">Please select your profession</span>  
-          </mat-error>  
+          <mat-error>
+            <span *ngIf="!form.get('profession').valid && form.get('profession').touched">Please select your
+              profession</span>
+          </mat-error>
         </div>
         <div class="form-group">
-        <mat-form-field class="form-item">
-            <!-- <input formControlName="income" matInput placeholder="Income" autocomplete="off"> -->
-            <input formControlName="income" matInput placeholder="Income" autocomplete="off"
-                        currencyMask
-                        [formControl]="form.get('income')"
-                        maxlength="12"
-                        [options]="{ 
+          <mat-form-field class="form-item">
+            <input formControlName="income" matInput placeholder="Income" autocomplete="off" currencyMask
+              [formControl]="form.get('income')" maxlength="12" [options]="{ 
                           prefix: '$',
                           align: 'left',
                           precision: 0,
                           allowNegative: false,
                           thousands: ',',
-                          decimal: '.' }"
-                      />
+                          decimal: '.' }" />
           </mat-form-field>
-          <mat-error>  
-            <span *ngIf="!form.get('income').valid && form.get('income').touched">Please enter your income</span>  
-          </mat-error>  
+          <mat-error>
+            <span *ngIf="!form.get('income').valid && form.get('income').touched">Please enter your income</span>
+          </mat-error>
         </div>
       </div>
 
       <div>
         <button mat-raised-button color="accent" [disabled]="form.invalid">Submit</button>
-        <button mat-raised-button color="accent" (click)="openDialog()">dialog</button>
       </div>
 
     </form>
   </mat-card-content>
 </mat-card>
-
