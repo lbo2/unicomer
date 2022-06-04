@@ -1,0 +1,89 @@
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';    
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';    
+.mat-card {    
+    text-align: -webkit-center;    
+}    
+    
+.toolbar {    
+    display: flex;    
+    align-items: center;    
+    width: 100%;    
+} 
+    
+body {    
+    margin: 0;    
+    font-family: Roboto, sans-serif;    
+} 
+
+.form-item {
+    width: 100%;
+}
+
+mat-card-title {
+    margin-bottom: 40px;
+}
+    
+mat-card {    
+    max-width: 80%;    
+    margin: 2em auto;    
+    text-align: center;    
+}    
+    
+mat-toolbar-row {    
+    justify-content: space-between;    
+} 
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+}
+
+mat-error {
+    text-align: justify
+}
+
+mat-radio-group {
+    display: flex;
+}
+
+display-flex, .signup-content, .form-row, .form-radio, .select-icon, .select-icon i {
+    display: flex;
+    display: -webkit-flex; }
+  
+  .form-row {
+    margin: 0 -15px; }
+    .form-row .form-group {
+      width: 50%;
+      padding: 0 15px; }
+    .form-row .form-group-single {
+    width: 100%;
+    padding: 0 15px; }
+  
+  .form-group, .form-group-single {
+    margin-bottom: 23px;
+    position: relative; }
+  
+  .form-radio {
+      align-items: center;
+    margin-bottom: 18px; }
+    .form-radio input {
+      width: auto;
+      display: inline-block; }
+  
+  .radio-label {
+    padding-right: 72px; }
+  
+  .form-radio-item {
+    position: relative;
+    margin-right: 45px; }
+    .form-radio-item label {
+      font-weight: 500;
+      font-size: 13px;
+      padding-left: 25px;
+      position: relative;
+      z-index: 9;
+      display: block;
+      cursor: pointer; }
+  
+  .form-submit {
+    text-align: right;
+    padding-top: 27px; }

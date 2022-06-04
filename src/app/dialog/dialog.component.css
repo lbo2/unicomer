@@ -1,0 +1,17 @@
+.msd-container--list {
+    display: grid;
+    grid-template-areas: "fst-col thr-col";
+    grid-template-columns: 80% auto;
+    font-size: 14px;}
+    .first-column {
+      display: grid;
+      grid-area: fst-col;
+      row-gap: 6px;
+      column-gap: 10px;
+      grid-template-columns: 160px auto;}
+  
+      span {
+        font-weight: bold;
+        justify-self: start;
+        text-align: left;
+      }

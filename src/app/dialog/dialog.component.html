@@ -1,0 +1,49 @@
+
+<h2 mat-dialog-title>Client's Information</h2>
+
+
+<mat-dialog-content>
+    <div class="first-column">
+
+        <label for="">First Name</label>
+        <span>{{ data.firstName }}</span>
+        
+        <label for="">Last Name</label>
+        <span>{{ data.lastName }}</span>
+        
+        <label for="">Date of Birth</label>
+        <span>{{ data.birthday }}</span>
+                                        
+        <label for="">Address</label>
+        <span>{{ data.address }}</span>
+        
+        <label for="">Cellphone</label>
+        <span>{{ data.cellphone | mask: '000-0000' }}</span>
+        
+        <label for="">Home Phone</label>
+        <span>{{ data.homephone | mask: '000-0000' }}</span>
+        
+        <label for="">Gender</label>
+        <span>{{ data.gender }}</span>
+        
+        <label for="">Profession</label>
+        <span>{{ data.profession }}</span>
+        
+        <label for="">Income</label>
+        <span>{{ data.income }}</span>
+                                        
+    </div>
+    
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+
+    <button class="mat-raised-button"
+            (click)="close()">
+        Close
+    </button>
+
+</mat-dialog-actions>
+
