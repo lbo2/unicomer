@@ -27,8 +27,6 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
 import { DialogComponent } from './dialog/dialog.component';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 
-export let options: Partial<IConfig> | (() => Partial<IConfig>);
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +54,7 @@ export let options: Partial<IConfig> | (() => Partial<IConfig>);
     FormsModule,
     ReactiveFormsModule,
     CurrencyMaskModule,
-    NgxMaskModule.forRoot(options)
+    NgxMaskModule.forRoot()
   ],
   providers: [
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
